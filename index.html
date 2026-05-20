@@ -1,88 +1,70 @@
-export default function LandingPage() {
-  const whatsappLink = "https://wa.me/123456";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earn Extra Income</title>
 
-  return (
-    <div className="min-h-screen bg-[#f3f3f3] overflow-hidden font-sans">
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-20 py-16 lg:py-24 relative">
-        <div className="grid lg:grid-cols-2 items-center gap-10">
-          {/* LEFT SIDE */}
-          <div className="max-w-[620px] z-10">
-            <h1 className="text-[72px] lg:text-[92px] leading-[0.92] font-black tracking-[-3px] text-[#071120]">
-              Earn extra
-              <br />
-              income at
-              <br />
-              home
-            </h1>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-            <p className="mt-10 text-[24px] leading-[1.35] text-black max-w-[560px] font-normal">
-              In recent years, we have witnessed an exponential increase in
-              prices. On the other hand, our salaries have not grown at the
-              same rate as prices. So to live a comfortable life these days,
-              we all need multiple sources of income. Thanks to the internet
-              and technology, we can now earn extra income from the comfort of
-              our home without having to juggle between jobs.
-            </p>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f3f3;
+      overflow-x: hidden;
+    }
 
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center mt-12 bg-[#19c97f] hover:bg-[#14b06e] text-white font-bold text-[24px] px-16 py-6 rounded-full transition-all duration-300 shadow-lg"
-            >
-              Contact Us - Whatsapp
-            </a>
-          </div>
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 70px 40px;
+    }
 
-          {/* RIGHT SIDE */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[720px]">
-              <img
-                src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1400&auto=format&fit=crop"
-                alt="Woman using phone"
-                className="w-full h-[640px] object-cover rounded-none"
-              />
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      position: relative;
+    }
 
-              {/* Floating Earnings Box */}
-              <div className="absolute left-[-60px] bottom-[-40px] bg-[#f3f3f3] rounded-[40px] px-14 py-12 shadow-sm max-w-[420px]">
-                <div className="text-center leading-[1.02]">
-                  <div className="text-[60px] font-black text-[#18c77c] tracking-[-2px]">
-                    NZ$ 150 -
-                  </div>
-                  <div className="text-[60px] font-black text-[#18c77c] tracking-[-2px]">
-                    NZ$ 300
-                  </div>
-                  <div className="text-[58px] font-medium text-[#071120] mt-1">
-                    per day
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    .left {
+      width: 50%;
+      z-index: 2;
+    }
 
-        {/* Bottom CTA */}
-        <div className="flex justify-center mt-28">
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#19c97f] hover:bg-[#14b06e] text-white text-[24px] font-bold px-16 py-5 rounded-full shadow-lg transition-all duration-300"
-          >
-            Contact Us-Whatsapp
-          </a>
-        </div>
-      </div>
+    .title {
+      font-size: 92px;
+      line-height: 0.92;
+      font-weight: 900;
+      color: #071120;
+      letter-spacing: -4px;
+    }
 
-      {/* Mobile Floating CTA */}
-      <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-5 left-1/2 -translate-x-1/2 lg:hidden bg-[#19c97f] text-white font-bold px-8 py-4 rounded-full shadow-2xl z-50"
-      >
-        Contact Us - Whatsapp
-      </a>
-    </div>
-  );
-}
+    .description {
+      margin-top: 40px;
+      font-size: 24px;
+      line-height: 1.4;
+      color: #111;
+      max-width: 580px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 45px;
+      background: #18c77c;
+      color: white;
+      text-decoration: none;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 22px 55px;
+      border-radius: 60px;
+      transition: 0.3s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .whatsapp-btn:h
