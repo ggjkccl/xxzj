@@ -6,6 +6,7 @@
   <title>Earn Extra Income at Home</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -15,7 +16,7 @@
 
     body{
       background:#f5f7fb;
-      color:#1b1b1b;
+      overflow-x:hidden;
     }
 
     .hero{
@@ -24,120 +25,185 @@
       align-items:center;
       justify-content:center;
       padding:40px 20px;
+
       background:
-        linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
-        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop') center/cover;
+        linear-gradient(rgba(8,43,102,0.60), rgba(8,43,102,0.60)),
+        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1800&auto=format&fit=crop') center center/cover no-repeat;
     }
 
     .container{
-      max-width:1200px;
       width:100%;
+      max-width:1200px;
+
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:60px;
+
       align-items:center;
     }
 
+    .left{
+      color:white;
+    }
+
     .left h1{
-      font-size:72px;
+      font-size:78px;
       line-height:0.95;
-      color:#082b66;
       font-weight:900;
-      margin-bottom:20px;
+      margin-bottom:25px;
+      letter-spacing:-2px;
+      color:white;
     }
 
     .left h1 span{
-      color:#c59a5c;
+      display:block;
+      color:#d6b17a;
       font-style:italic;
       font-weight:500;
-      display:block;
-      margin-top:10px;
+      margin-top:12px;
     }
 
     .badge{
       display:inline-block;
-      background:#082b66;
-      color:#fff;
-      padding:12px 24px;
-      border-radius:50px;
+      background:rgba(255,255,255,0.15);
+      backdrop-filter:blur(10px);
+
+      border:1px solid rgba(255,255,255,0.25);
+
+      color:white;
+      padding:14px 28px;
+      border-radius:60px;
+
       font-size:15px;
       font-weight:bold;
       letter-spacing:1px;
-      margin-bottom:30px;
+
+      margin-bottom:35px;
     }
 
     .desc{
-      font-size:20px;
+      font-size:21px;
       line-height:1.8;
-      color:#444;
+      color:rgba(255,255,255,0.92);
+
       margin-bottom:35px;
+      max-width:650px;
     }
 
     .features{
       display:flex;
-      gap:20px;
       flex-wrap:wrap;
-      margin-bottom:35px;
+      gap:18px;
+      margin-bottom:40px;
     }
 
     .feature{
-      background:#fff;
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(10px);
+
+      border:1px solid rgba(255,255,255,0.15);
+
+      color:white;
+
       padding:18px 22px;
-      border-radius:16px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+      border-radius:18px;
+
       font-size:15px;
-      font-weight:bold;
-      color:#082b66;
+      font-weight:600;
+
+      transition:0.3s ease;
+    }
+
+    .feature:hover{
+      transform:translateY(-3px);
+      background:rgba(255,255,255,0.18);
     }
 
     .cta{
       display:inline-flex;
       align-items:center;
-      gap:12px;
-      background:#25D366;
-      color:#fff;
+      justify-content:center;
+
       text-decoration:none;
-      padding:18px 34px;
+
+      background:#25D366;
+      color:white;
+
+      padding:20px 38px;
+
       border-radius:60px;
+
       font-size:22px;
       font-weight:bold;
+
+      box-shadow:0 15px 35px rgba(37,211,102,0.35);
+
       transition:0.3s ease;
-      box-shadow:0 10px 25px rgba(37,211,102,0.35);
     }
 
     .cta:hover{
-      transform:translateY(-3px);
-      background:#1ebe5d;
+      transform:translateY(-4px) scale(1.02);
+      background:#1fc15c;
+    }
+
+    .right{
+      display:flex;
+      justify-content:center;
     }
 
     .right img{
       width:100%;
+      max-width:520px;
+
       border-radius:30px;
-      box-shadow:0 15px 40px rgba(0,0,0,0.15);
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
+
+      border:3px solid rgba(255,255,255,0.15);
     }
 
     .footer{
       text-align:center;
       padding:25px;
       font-size:14px;
-      color:#777;
-      background:#fff;
+      color:#666;
+      background:white;
     }
 
-    @media(max-width:900px){
+    @media(max-width:950px){
+
       .container{
         grid-template-columns:1fr;
+        gap:40px;
+      }
+
+      .left{
+        text-align:center;
       }
 
       .left h1{
-        font-size:52px;
+        font-size:54px;
       }
 
       .desc{
         font-size:18px;
+        margin:auto;
+        margin-bottom:35px;
       }
+
+      .features{
+        justify-content:center;
+      }
+
+      .right img{
+        max-width:100%;
+      }
+
     }
+
   </style>
+
 </head>
 
 <body>
@@ -183,7 +249,12 @@
     </div>
 
     <div class="right">
-      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" alt="Work From Home">
+
+      <img
+        src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop"
+        alt="Work From Home"
+      >
+
     </div>
 
   </div>
