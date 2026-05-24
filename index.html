@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Investment Thinking Style</title>
+<title>Investment System｜Thinking Method</title>
 
 <style>
 body{
@@ -13,51 +13,35 @@ body{
   color:#fff;
 }
 
-/* HERO整体改为纵向结构 */
+/* HERO */
 .hero{
   min-height:100vh;
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:flex-start;
-  padding:30px 18px 120px;
+  padding:28px 16px 120px;
   gap:18px;
 }
 
-/* 👤 人设图片（最重要信任层） */
+/* 人物图 */
 .hero-image{
   width:100%;
   max-width:520px;
   border-radius:16px;
   overflow:hidden;
-  position:relative;
   border:1px solid rgba(255,255,255,0.08);
-  box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 .hero-image img{
   width:100%;
   height:420px;
   object-fit:cover;
-  filter:contrast(1.05) saturate(0.9);
 }
 
-/* 图片底部轻微渐变 */
-.hero-image:after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  height:40%;
-  background:linear-gradient(to top, rgba(11,15,25,0.9), transparent);
-}
-
-/* 文本区 */
+/* 内容 */
 .content{
   width:100%;
   max-width:520px;
-  text-align:left;
 }
 
 .tag{
@@ -66,7 +50,7 @@ body{
   border:1px solid #ff0033;
   color:#ff0033;
   font-size:12px;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 h1{
@@ -82,35 +66,38 @@ h1{
 }
 
 .quote{
-  margin-top:14px;
+  margin-top:12px;
   font-size:14px;
   font-weight:bold;
 }
 
-.highlight{
-  color:#ff0033;
-}
+.highlight{ color:#ff0033; }
 
 /* CTA */
 .cta{
-  margin-top:18px;
+  margin-top:16px;
   display:block;
   background:#06c755;
-  color:#fff;
-  padding:14px 20px;
+  padding:14px;
   border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
   text-align:center;
+  text-decoration:none;
+  color:#fff;
+  font-weight:bold;
 }
 
 /* card */
 .card{
-  margin-top:16px;
+  margin-top:14px;
   background:#111827;
   padding:16px;
   border-radius:12px;
   border:1px solid rgba(255,255,255,0.05);
+}
+
+.card h3{
+  font-size:15px;
+  margin-bottom:8px;
 }
 
 .small{
@@ -119,7 +106,18 @@ h1{
   line-height:1.6;
 }
 
-/* bottom CTA */
+/* section */
+.section{
+  margin-top:14px;
+}
+
+.list{
+  font-size:13px;
+  opacity:0.8;
+  line-height:1.8;
+}
+
+/* fixed CTA */
 .fixed{
   position:fixed;
   bottom:0;
@@ -135,29 +133,10 @@ h1{
   background:#06c755;
   padding:14px;
   border-radius:10px;
+  text-align:center;
   text-decoration:none;
   color:#fff;
   font-weight:bold;
-  text-align:center;
-}
-
-/* desktop优化 */
-@media (min-width:768px){
-  .hero{
-    flex-direction:row;
-    justify-content:center;
-    align-items:flex-start;
-    gap:40px;
-    padding-top:60px;
-  }
-
-  .hero-image img{
-    height:520px;
-  }
-
-  .content{
-    text-align:left;
-  }
 }
 </style>
 </head>
@@ -166,46 +145,95 @@ h1{
 
 <div class="hero">
 
-  <!-- 👤 人设照片（最上方核心信任） -->
+  <!-- 人设视觉 -->
   <div class="hero-image">
-    <img src="hero.jpg" alt="Horiemon Style">
+    <img src="hero.jpg" alt="Horiemon style">
   </div>
 
-  <!-- 文字内容（在下方） -->
   <div class="content">
 
     <div class="tag">INVESTMENT × SPEED × LOGIC</div>
 
     <h1>
-      思考を変えろ。市場はシンプルだ。
+      思考を変えろ。市場は単純だ。
     </h1>
 
     <div class="subtitle">
       元ライブドア社長の思考スタイルから学ぶ<br>
-      感情に依存しない株式投資戦略
+      “感情に依存しない投資判断システム”
     </div>
 
     <div class="quote">
-      「努力ではなく<span class="highlight">情報の速度</span>が結果を決める」
+      「結果を決めるのは才能ではなく<span class="highlight">情報速度</span>だ」
     </div>
 
     <a class="cta" href="https://line.me/" target="_blank">
       LINEで無料参加
     </a>
 
+    <!-- 核心说明 -->
     <div class="card">
+      <h3>このプログラムとは</h3>
       <div class="small">
-        本プログラムは:contentReference[oaicite:1]{index=1}の<br>
-        効率主義・即断即決スタイルをベースに設計されています。
+        本システムは市場予測ではなく、「意思決定の構造化」を目的としています。<br>
+        投資を“感覚”ではなく“ルール化された判断”へ変換します。
       </div>
     </div>
+
+    <!-- 方法论 -->
+    <div class="card">
+      <h3>提供内容</h3>
+      <div class="list">
+        ・短期トレンド判断フレーム<br>
+        ・資金フローの可視化手法<br>
+        ・リスク管理のルール設計<br>
+        ・感情トレード排除ロジック
+      </div>
+    </div>
+
+    <!-- 逻辑 -->
+    <div class="card">
+      <h3>なぜ勝てないのか</h3>
+      <div class="small">
+        多くの投資家は「分析不足」ではなく「判断遅延」で負けます。<br><br>
+        市場は複雑ではありません。複雑に感じるのは情報整理ができていないだけです。
+      </div>
+    </div>
+
+    <!-- 人设绑定 -->
+    <div class="card">
+      <h3>思想ベース</h3>
+      <div class="small">
+        本プログラムは:contentReference[oaicite:1]{index=1}の<br>
+        効率主義・即断即決の思考スタイルを参考に設計されています。
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card">
+      <h3>よくある質問</h3>
+      <div class="small">
+        Q：初心者でもできますか？<br>
+        A：ルール化された判断なので可能です。<br><br>
+
+        Q：どのくらい時間が必要ですか？<br>
+        A：短時間で判断できる設計です。<br><br>
+
+        Q：投資経験がなくても大丈夫？<br>
+        A：必要なのは経験ではなく“理解構造”です。
+      </div>
+    </div>
+
+    <a class="cta" href="https://line.me/" target="_blank">
+      今すぐLINEで無料参加
+    </a>
 
   </div>
 
 </div>
 
 <div class="fixed">
-  <a href="https://line.me/">今すぐLINEで無料参加</a>
+  <a href="https://line.me/">LINEで無料参加</a>
 </div>
 
 </body>
