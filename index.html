@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>日本株インテリジェンス教育システム</title>
+<title>日本株インテリジェンスシステム</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -15,29 +15,54 @@ background:#0b0f1a;
 color:#fff;
 }
 
-.container{max-width:1080px;margin:auto;padding:0 20px}
-
-/* HERO */
+/* HERO IMAGE */
 .hero-img{
 width:100%;
 height:460px;
 object-fit:cover;
 display:block;
-filter:brightness(0.85);
+filter:brightness(0.85) contrast(1.05);
 }
 
+/* CONTAINER */
+.container{
+max-width:1080px;
+margin:auto;
+padding:0 20px;
+}
+
+/* HERO */
 .hero{
 text-align:center;
-padding:30px 20px;
+padding:25px 20px;
 }
 
-h1{font-size:42px;margin:10px 0}
+h1{
+font-size:42px;
+margin:10px 0;
+}
+
+.tag{
+color:#a5b4fc;
+font-size:13px;
+margin-top:10px;
+}
 
 .sub{
 color:#cbd5e1;
 font-size:18px;
 max-width:760px;
 margin:auto;
+line-height:1.6;
+}
+
+/* PERSONA INTRO */
+.persona{
+max-width:760px;
+margin:15px auto 0;
+color:#cbd5e1;
+font-size:14px;
+line-height:1.7;
 }
 
 /* CTA */
@@ -50,27 +75,55 @@ font-weight:700;
 color:#fff;
 text-decoration:none;
 margin-top:20px;
+transition:.2s;
 }
 
-/* TAG */
-.tag{
-color:#a5b4fc;
-font-size:13px;
-margin-top:10px;
+.cta:hover{transform:scale(1.05)}
+
+/* RESULT STRIP */
+.result-strip{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:30px;
 }
 
-/* SECTION */
-section{
+.box{
+background:#111827;
+padding:18px;
+border-radius:12px;
+border:1px solid #1f2937;
+}
+
+.box h3{
+color:#34d399;
+font-size:16px;
+}
+
+/* WARNING */
+.warning{
+background:#111827;
+padding:40px 20px;
+text-align:center;
+border-top:1px solid #1f2937;
+border-bottom:1px solid #1f2937;
+margin-top:20px;
+}
+
+.warning h2{
+font-size:22px;
+}
+
+.highlight{
+color:#f87171;
+font-weight:700;
+}
+
+/* LOGIC */
+.logic{
 padding:70px 0;
 }
 
-h2{
-text-align:center;
-font-size:26px;
-margin-bottom:30px;
-}
-
-/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -86,34 +139,13 @@ border:1px solid #1f2937;
 
 .card h3{color:#93c5fd}
 
-/* RICH BLOCK */
-.rich{
-background:#0f172a;
-padding:60px 0;
-border-top:1px solid #1f2937;
-border-bottom:1px solid #1f2937;
+/* FINAL */
+.final{
+text-align:center;
+padding:70px 20px;
 }
 
-.list{
-max-width:900px;
-margin:auto;
-color:#cbd5e1;
-line-height:1.8;
-}
-
-/* AUDIENCE */
-.audience{
-background:#111827;
-padding:50px 20px;
-border-radius:14px;
-}
-
-.audience ul{
-color:#cbd5e1;
-line-height:1.8;
-}
-
-/* FLOAT */
+/* FLOAT CTA */
 .float{
 position:fixed;
 bottom:15px;
@@ -125,6 +157,7 @@ border-radius:999px;
 font-weight:700;
 color:#fff;
 text-decoration:none;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
 z-index:999;
 }
 
@@ -132,6 +165,7 @@ z-index:999;
 @media(max-width:768px){
 .hero-img{height:300px}
 h1{font-size:28px}
+.result-strip{grid-template-columns:1fr}
 .grid{grid-template-columns:1fr}
 }
 </style>
@@ -139,127 +173,113 @@ h1{font-size:28px}
 
 <body>
 
-<!-- 🔥 HERO IMAGE -->
-<img src="hero-image.jpg" class="hero-img">
+<!-- 🔥 1. 人设图（核心信任锚点） -->
+<img src="hero-image.jpg" class="hero-img" alt="persona">
 
+<!-- 🔥 2. 首屏 -->
 <div class="hero container">
 
   <h1>情報格差で“勝てる投資家”へ</h1>
 
-  <div class="tag">
-    日本株インテリジェンス教育システム
+  <div class="tag">日本株インテリジェンス教育システム</div>
+
+  <!-- 🔥 人设简介（关键增强层） -->
+  <div class="persona">
+    日本株式市場に特化した独立系インベストメントリサーチャー。<br/>
+    機関投資家レベルの情報処理ロジックを個人投資家向けに再構築し、意思決定の再現性を高める教育システムを開発。
   </div>
 
   <p class="sub">
-    多くの投資家は「知識」で戦っています。<br/>
-    しかし勝つ人は「情報設計」と「意思決定構造」で戦っています。
+    投資の差は努力ではなく「情報設計」で決まる。<br/>
+    正しい判断構造を持つだけで結果は変わる。
   </p>
 
   <a class="cta" href="https://line.me/R/ti/p/@YOUR_LINE_ID">
     LINEで無料参加する
   </a>
 
-</div>
+  <!-- 🔥 结果导向 -->
+  <div class="result-strip">
 
-<!-- 🔥 PROBLEM EXPANSION -->
-<section>
-  <div class="container">
+    <div class="box">
+      <h3>判断速度の最適化</h3>
+      <p>数分で銘柄評価が可能</p>
+    </div>
 
-    <h2>なぜ多くの投資家は負けるのか</h2>
+    <div class="box">
+      <h3>感情排除</h3>
+      <p>ルールベース投資</p>
+    </div>
 
-    <div class="list">
-
-      ・同じニュースを見ても判断がバラバラになる  
-      ・感情で売買してしまい損失が拡大する  
-      ・正しい情報を持っていてもタイミングが遅い  
-      ・勝ちパターンが再現できない  
-
-      <br/><br/>
-
-      👉 問題は「情報量」ではなく「情報処理構造」です
-
+    <div class="box">
+      <h3>情報優位性</h3>
+      <p>市場より一歩早い判断</p>
     </div>
 
   </div>
-</section>
 
-<!-- 🔥 VALUE SYSTEM -->
-<section class="rich">
+</div>
 
+<!-- 🔥 风险强化 -->
+<div class="warning">
+
+  <h2>
+    すでに<span class="highlight">情報格差は拡大</span>しています
+  </h2>
+
+  <p style="color:#cbd5e1">
+    同じニュースでも、結果が変わる理由は「解釈能力」です。
+  </p>
+
+</div>
+
+<!-- 🔥 逻辑解释层 -->
+<section class="logic">
   <div class="container">
 
-    <h2>このシステムで学ぶ思考構造</h2>
+    <h2 style="text-align:center;margin-bottom:30px;">
+      なぜ結果が変わるのか
+    </h2>
 
     <div class="grid">
 
       <div class="card">
-        <h3>市場構造理解</h3>
-        <p>株価は感情ではなく資金フローで動く</p>
+        <h3>市場構造</h3>
+        <p>株価は感情ではなく資金で動く</p>
       </div>
 
       <div class="card">
-        <h3>判断ルール化</h3>
-        <p>すべてのトレードを再現可能にする</p>
+        <h3>意思決定</h3>
+        <p>速度が遅いと負ける</p>
       </div>
 
       <div class="card">
-        <h3>情報速度最適化</h3>
-        <p>ニュース・決算を即時判断に変換</p>
+        <h3>ルール化</h3>
+        <p>再現性がない戦略は長期で負ける</p>
       </div>
 
       <div class="card">
-        <h3>リスク制御</h3>
-        <p>損失を構造的に限定する設計</p>
+        <h3>情報設計</h3>
+        <p>見る情報を変えるだけで結果が変わる</p>
       </div>
 
     </div>
 
   </div>
-</section>
-
-<!-- 🔥 WHO IT IS FOR -->
-<section>
-
-  <div class="container">
-
-    <h2>このプログラムが向いている人</h2>
-
-    <div class="audience">
-
-      <ul>
-        <li>✔ 日本株を始めたいが何から学ぶべきか分からない</li>
-        <li>✔ トレードで安定して勝てる型が欲しい</li>
-        <li>✔ 感情トレードをやめたい</li>
-        <li>✔ 情報はあるのに結果が出ない</li>
-        <li>✔ 投資を“仕組み化”したい</li>
-      </ul>
-
-    </div>
-
-  </div>
-
 </section>
 
 <!-- 🔥 FINAL CTA -->
-<section>
+<section class="final">
 
-  <div class="container" style="text-align:center">
+  <h2>今行動する人だけが次に進む</h2>
 
-    <h2>行動するかどうかで結果は分かれる</h2>
-
-    <p style="color:#cbd5e1">
-      同じ市場でも、意思決定構造で結果は変わる
-    </p>
-
-    <a class="cta" href="https://line.me/R/ti/p/@YOUR_LINE_ID">
-      LINEで無料参加する
-    </a>
-
-  </div>
+  <a class="cta" href="https://line.me/R/ti/p/@YOUR_LINE_ID">
+    LINEで無料参加する
+  </a>
 
 </section>
 
-<!-- FLOAT CTA -->
+<!-- 🔥 FLOAT CTA -->
 <a class="float" href="https://line.me/R/ti/p/@YOUR_LINE_ID">
   LINE登録
 </a>
