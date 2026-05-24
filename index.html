@@ -3,150 +3,159 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>SMART INVESTMENT LAB</title>
+<title>INVESTMENT THINKING SYSTEM</title>
 
 <style>
-  body{
-    margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
-    background:#0a0a0a;
-    color:#fff;
-  }
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  background:#0b0f14;
+  color:#fff;
+}
 
-  /* HERO */
-  .hero{
-    display:flex;
-    min-height:100vh;
-  }
+/* HERO */
+.hero{
+  display:flex;
+  min-height:100vh;
+}
 
-  /* 替代图片：人物杂志剪影风 */
-  .left{
-    flex:1;
-    position:relative;
-    background: radial-gradient(circle at 30% 30%, #1f2a44, #05070c);
-    overflow:hidden;
-  }
+/* ===== 左侧：纯CSS人物海报（关键） ===== */
+.left{
+  flex:1;
+  position:relative;
+  background: radial-gradient(circle at 30% 20%, #1b2a44, #05070c);
+  overflow:hidden;
+}
 
-  /* 人物剪影层（增强“堀江贵文感”） */
-  .silhouette{
-    position:absolute;
-    inset:0;
-    background:
-      linear-gradient(120deg, rgba(0,0,0,0.9), rgba(0,0,0,0.2)),
-      radial-gradient(circle at 60% 50%, rgba(122,162,255,0.2), transparent 60%);
-  }
+/* 光束 */
+.left::before{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle, rgba(122,162,255,0.25), transparent 60%);
+  top:-100px;
+  left:-100px;
+}
 
-  .shape{
-    position:absolute;
-    width:280px;
-    height:420px;
-    background:linear-gradient(180deg, #ffffff22, transparent);
-    clip-path: polygon(50% 0%, 65% 10%, 70% 25%, 60% 45%, 62% 70%, 55% 100%, 45% 100%, 40% 70%, 42% 45%, 30% 25%, 35% 10%);
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    filter:blur(0.3px);
-    opacity:0.8;
-  }
+/* 人物抽象剪影（完全本地） */
+.figure{
+  position:absolute;
+  width:260px;
+  height:420px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0.02));
+  clip-path: polygon(
+    50% 0%,
+    65% 10%,
+    70% 25%,
+    62% 45%,
+    66% 65%,
+    58% 100%,
+    42% 100%,
+    34% 65%,
+    38% 45%,
+    30% 25%,
+    35% 10%
+  );
+  filter:blur(0.2px);
+}
 
-  /* RIGHT */
-  .right{
-    flex:1;
-    padding:60px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-  }
+/* 右侧内容 */
+.right{
+  flex:1;
+  padding:70px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
 
-  .tag{
-    color:#7aa2ff;
-    letter-spacing:2px;
-    font-size:12px;
-  }
+.tag{
+  color:#7aa2ff;
+  letter-spacing:2px;
+  font-size:12px;
+}
 
-  h1{
-    font-size:44px;
-    margin:20px 0;
-    line-height:1.2;
-  }
+h1{
+  font-size:46px;
+  margin:20px 0;
+  line-height:1.2;
+}
 
-  .sub{
-    color:#b8c4d6;
-    font-size:15px;
-    line-height:1.6;
-    max-width:520px;
-  }
+.sub{
+  color:#b8c4d6;
+  font-size:15px;
+  line-height:1.7;
+  max-width:520px;
+}
 
-  .chips{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:25px;
-  }
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:25px;
+}
 
-  .chip{
-    padding:8px 12px;
-    border:1px solid rgba(255,255,255,0.2);
-    border-radius:20px;
-    font-size:12px;
-    color:#cfd8e6;
-  }
+.badge{
+  padding:8px 12px;
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:20px;
+  font-size:12px;
+  color:#cfd8e6;
+}
 
-  .cta{
-    margin-top:35px;
-  }
+.cta{
+  margin-top:35px;
+}
 
-  .btn{
-    display:inline-block;
-    background:#25D366;
-    color:#fff;
-    padding:14px 24px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-  }
+.btn{
+  display:inline-block;
+  background:#25D366;
+  color:#fff;
+  padding:14px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-  .btn:hover{
-    transform:scale(1.05);
-  }
+.btn:hover{
+  transform:scale(1.05);
+}
 
-  /* SECTION */
-  .section{
-    padding:80px 20px;
-    max-width:1000px;
-    margin:auto;
-  }
+/* SECTION */
+.section{
+  padding:80px 20px;
+  max-width:1000px;
+  margin:auto;
+}
 
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-  }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
 
-  .card{
-    background:#111;
-    padding:20px;
-    border-radius:14px;
-    border:1px solid rgba(255,255,255,0.08);
-  }
+.card{
+  background:#111;
+  padding:20px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.08);
+}
 
-  .card h3{
-    margin-top:0;
-    font-size:16px;
-  }
+.footer{
+  text-align:center;
+  font-size:12px;
+  color:#666;
+  padding:40px;
+}
 
-  .footer{
-    text-align:center;
-    font-size:12px;
-    color:#666;
-    padding:40px;
-  }
-
-  @media(max-width:900px){
-    .hero{flex-direction:column;}
-    .right{padding:30px;}
-    .grid{grid-template-columns:1fr;}
-  }
+@media(max-width:900px){
+  .hero{flex-direction:column;}
+  .right{padding:30px;}
+  .grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 
@@ -154,11 +163,12 @@
 
 <div class="hero">
 
+  <!-- LEFT VISUAL -->
   <div class="left">
-    <div class="silhouette"></div>
-    <div class="shape"></div>
+    <div class="figure"></div>
   </div>
 
+  <!-- RIGHT CONTENT -->
   <div class="right">
 
     <div class="tag">THINKING SYSTEM / INVESTMENT EDUCATION</div>
@@ -171,17 +181,17 @@
     <p class="sub">
       本プログラムは、日本の実業家
       <strong>堀江貴文</strong>
-      :contentReference[oaicite:0]{index=0} の思考スタイル
-      にインスパイアされた株式投資教育です。
-      <br/><br/>
-      「感情ではなく構造」「努力ではなく効率」を重視します。
+      :contentReference[oaicite:0]{index=0} の思考スタイルに
+      インスパイアされた株式投資トレーニングです。<br/><br/>
+
+      感情ではなく構造で判断する。努力ではなくシステムで勝つ。
     </p>
 
-    <div class="chips">
-      <div class="chip">高速意思決定</div>
-      <div class="chip">データ思考</div>
-      <div class="chip">リスク管理</div>
-      <div class="chip">再現性モデル</div>
+    <div class="badges">
+      <div class="badge">高速意思決定</div>
+      <div class="badge">データ思考</div>
+      <div class="badge">リスク制御</div>
+      <div class="badge">再現性モデル</div>
     </div>
 
     <div class="cta">
@@ -194,18 +204,19 @@
 
 </div>
 
+<!-- SECTION -->
 <div class="section">
 
   <div class="grid">
 
     <div class="card">
       <h3>なぜ負けるのか</h3>
-      <p>情報遅延・感情トレード・無戦略</p>
+      <p>情報遅延・感情トレード・戦略欠如</p>
     </div>
 
     <div class="card">
       <h3>学習方法</h3>
-      <p>短時間シナリオ型トレーニング</p>
+      <p>短時間×高頻度の実践型訓練</p>
     </div>
 
     <div class="card">
@@ -218,7 +229,7 @@
 </div>
 
 <div class="footer">
-教育目的のコンテンツです。投資助言ではありません。
+教育目的のコンテンツです（投資助言ではありません）
 </div>
 
 </body>
